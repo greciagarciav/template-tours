@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="es"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260911-01-a45ed2d","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Bricolage Grotesque":"YAFyMcdwzpc,0","Canva Sans":"YAFLd8sKbwc,2","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YAFdJksXcAk,0","Libre Baskerville":"YACgEUFdPdA,0","Manrope":"YAHO2b2feC4,0","Merriweather":"YACgEXvHxxs,0","Montserrat":"YADLjI9qxTA,0","Nunito":"YACgEX8C5Gg,0","Oleo Script":"YACgEQQ14jI,0","Phantom Sans":"YAHO2E8Pb88,0","Playfair Display":"YACgEYmuCJE,0","Poppins":"YAFdJjbTu24,1","Press Start 2P":"YAFyGr-8pmQ,0","Quicksand":"YADWjpfPmdk,0","Raleway":"YACgEVg3xZg,0","Segoe UI":"YAHNdRD1Klw,0","Source Sans 3":"YAG4lO1Mj10,0","Spectral":"YAHO2rVUHIM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Ubuntu":"YACgERDU--Q,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0","ui-monospace":"YADlN8CFZ8Q,0","ui-sans-serif":"YACkoN-xg4g,0"}}');</script><script src="/_sdk/c21197326e9a1154.telemetry_sdk.js" integrity="sha512-Aqwl+NmLtKBcMQM4HY+W9lmBHa+zP5MqSEuYfCjkzt4xeOSv2xNz81cCp7JyXBVrY+zojg5o94FHY/R31v2d3Q=="></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cusco Expedition</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lucide@0.577.0/dist/umd/lucide.min.js"></script>
+  <script src="/_sdk/efe904fe8a212716.data_sdk.js" integrity="sha512-oiO0pmn5llS1uDeB2l690YywxqOe/a0U1kzY6RGaLZXtyh9YjTk1CUoK/bJUugc1QbUaJMJ3IE1MtpNY5NBZCw=="></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Fraunces:opsz,wght@9..144,600;9..144,700&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#08334d; --emerald:#167c70; --terracotta:#c65f3b; --gold:#d99b2b; --mist:#f4f8f7; --line:#d8e4e1; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; font-family:"DM Sans",sans-serif; color:var(--ink); background:var(--mist); }
+    .display { font-family:"Fraunces",serif; }
+    .weave { background-image:linear-gradient(90deg,rgba(217,155,43,.18) 25%,transparent 25%,transparent 75%,rgba(198,95,59,.15) 75%),linear-gradient(90deg,rgba(22,124,112,.11) 25%,transparent 25%,transparent 75%,rgba(8,51,77,.1) 75%); background-size:28px 5px, 14px 5px; }
+    .hero-overlay { background:linear-gradient(90deg,rgba(3,32,49,.88),rgba(3,32,49,.55),rgba(3,32,49,.18)); }
+    .tour-card { transition:transform .25s ease,box-shadow .25s ease; }
+    .tour-card:hover { transform:translateY(-5px); box-shadow:0 18px 38px rgba(8,51,77,.13); }
+    .focus-ring:focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
+    .lang-en { display:none; }
+    body.english .lang-es { display:none; }
+    body.english .lang-en { display:inline; }
+    .hidden-filter { display:none !important; }
+    .modal-open { overflow:hidden; }
+    .cal-day { min-height:42px; border:1px solid var(--line); border-radius:10px; font-weight:700; transition:.2s; }
+    .cal-day.available:hover,.cal-day.selected { background:var(--emerald); color:white; border-color:var(--emerald); }
+    .cal-day.limited { color:#8a5310; border-color:#eccb8e; background:#fff8e9; }
+    .cal-day.sold { background:#f1f3f2; color:#9aa6a4; text-decoration:line-through; cursor:not-allowed; }
+    .payment-choice input:checked + label { border-color:var(--emerald); background:#ebf8f5; box-shadow:0 0 0 2px rgba(22,124,112,.14); }
+    .mobile-nav.open { display:flex; }
+    @media(max-width:767px){ .mobile-nav{display:none} .hero-content{padding-top:5rem;padding-bottom:8rem} }
+  </style>
+  <script src="/_sdk/6125e8aa3c264a2d.resizing_sdk.js" type="text/javascript" integrity="sha512-+j9iK2FF/yFSTU389rFqKj3v0s1ELh1r0aj3mqpsVRZujaeWi0WgN7jmTcWLcBq91dz3NCEyXqMtHbwpOxhDYg=="></script>
+ </head>
+ <body data-template-id="__page-root" class="w-full" style="background: rgb(244, 248, 247);">
+  <div class="weave h-1.5"></div>
+  <header>
+   <div data-template-id="trust-bar" class="canva-banner bg-[#08334d] px-4 py-2 text-center text-sm text-white" style="background: rgb(8, 51, 77); color: rgb(255, 255, 255);"><span class="lang-es">Operadores autorizados · Pagos seguros · Atención local en Cusco</span> <span class="lang-en">Authorized operators · Secure payments · Local Cusco support</span>
+   </div>
+   <nav data-template-id="main-nav" class="canva-header bg-white border-b border-[#d8e4e1] sticky top-0 z-40" style="background: rgb(255, 255, 255);">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between gap-5"><a href="#inicio" data-template-id="brand-name" class="canva-link font-bold text-xl tracking-tight text-[#08334d] focus-ring" style="color: rgb(8, 51, 77); font-weight: 700; font-style: normal; font-size: 22px;">Cusco Expedition</a>
+     <div class="hidden lg:flex items-center gap-6 text-sm font-semibold"><a href="#tours" class="focus-ring hover:text-[#167c70]"><span class="lang-es">Destinos en Cusco</span><span class="lang-en">Cusco destinations</span></a> <a href="#tours" class="focus-ring hover:text-[#167c70]">Machu Picchu</a> <a href="#tours" class="focus-ring hover:text-[#167c70]">Trekking</a>
+     </div>
+     <div class="flex items-center gap-2"><label class="sr-only" for="languageSelect">Idioma</label> <select id="languageSelect" class="focus-ring rounded-lg border border-[#d8e4e1] bg-white px-2 py-2 text-sm font-semibold"> <option value="es">Español</option><option value="en">English</option> </select> <label class="sr-only" for="currencySelect">Moneda</label> <select id="currencySelect" class="focus-ring rounded-lg border border-[#d8e4e1] bg-white px-2 py-2 text-sm font-semibold"> <option value="USD">USD</option><option value="PEN">PEN</option> </select> <button id="reserveTop" data-template-id="nav-reserve-button" type="button" class="canva-button focus-ring hidden sm:inline-flex rounded-lg bg-[#c65f3b] px-4 py-2.5 text-sm font-bold text-white hover:bg-[#a94b2e]" style="background: rgb(198, 95, 59); color: rgb(255, 255, 255); font-weight: 700;"> <span class="lang-es">Reservar Tour</span><span class="lang-en">Book a tour</span> </button> <button id="menuButton" type="button" class="focus-ring lg:hidden rounded-lg p-2 text-[#08334d]" aria-label="Abrir menú" aria-expanded="false"><i data-lucide="menu"></i></button>
+     </div>
+    </div>
+    <div id="mobileNav" class="mobile-nav lg:hidden flex-col gap-3 px-5 pb-5 bg-white border-t border-[#d8e4e1]"><a href="#tours" class="font-semibold">Destinos en Cusco</a><a href="#tours" class="font-semibold">Machu Picchu</a><a href="#tours" class="font-semibold">Trekking</a> <button id="mobileReserve" type="button" class="focus-ring rounded-lg bg-[#c65f3b] px-4 py-3 font-bold text-white text-left">Reservar Tour</button>
+    </div>
+   </nav>
+  </header>
+  <main>
+   <section id="inicio" class="relative min-h-[620px] flex items-center overflow-visible"><img data-template-id="hero-image" loading="lazy" class="canva-image absolute inset-0 w-full h-full object-cover" src="https://images.pexels.com/photos/259967/pexels-photo-259967.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1280" alt="Stunning aerial perspective of Machu Picchu with lush surroundings under a cloudy sky.">
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="hero-content relative z-10 max-w-7xl w-full mx-auto px-4 py-24">
+     <div class="max-w-3xl text-white">
+      <p data-template-id="hero-kicker" class="canva-tag inline-flex rounded-full bg-[#d99b2b] px-3 py-1 text-sm font-bold text-[#08334d]" style="background: rgb(217, 155, 43); color: rgb(8, 51, 77); font-weight: 700; font-style: normal; font-size: 14px;">PERÚ · ANDES · AVENTURA</p>
+      <h1 data-template-id="hero-title" class="canva-text display mt-5 text-4xl md:text-6xl leading-[1.05]" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 32px; line-height: 1.1;">Vive la magia del Cusco: Reserva tu aventura a Machu Picchu y más.</h1>
+      <p data-template-id="hero-subtitle" class="canva-text mt-5 max-w-2xl text-lg leading-relaxed text-white" style="color: rgb(255, 255, 255); font-weight: 400; font-style: normal; font-size: 18px; line-height: 1.5;">Explora el ombligo del mundo con disponibilidad en tiempo real, gestión de boletos oficiales y pagos seguros en línea.</p>
+     </div>
+     <form id="searchForm" data-template-id="search-panel" class="canva-panel mt-10 grid grid-cols-1 md:grid-cols-4 gap-3 rounded-2xl bg-white p-4 shadow-2xl" novalidate="" style="background: rgb(255, 255, 255);">
+      <div><label for="destination" class="text-sm font-bold"><span class="lang-es">Destino</span><span class="lang-en">Destination</span></label> <select id="destination" class="focus-ring mt-1 w-full rounded-lg border border-[#d8e4e1] p-3"> <option value="">Selecciona un destino</option><option value="Machu Picchu">Machu Picchu</option><option value="Valle Sagrado">Valle Sagrado</option><option value="Laguna Humantay">Laguna Humantay</option> </select>
+      </div>
+      <div><label for="travelDate" class="text-sm font-bold"><span class="lang-es">Fecha de viaje</span><span class="lang-en">Travel date</span></label> <input id="travelDate" type="date" class="focus-ring mt-1 w-full rounded-lg border border-[#d8e4e1] p-3">
+      </div>
+      <div><label for="quickPassengers" class="text-sm font-bold"><span class="lang-es">Pasajeros</span><span class="lang-en">Travelers</span></label> <select id="quickPassengers" class="focus-ring mt-1 w-full rounded-lg border border-[#d8e4e1] p-3"><option value="1">1 pasajero</option><option value="2" selected="">2 pasajeros</option><option value="3">3 pasajeros</option><option value="4">4 pasajeros</option></select>
+      </div><button data-template-id="search-button" type="submit" class="canva-button focus-ring mt-auto rounded-lg bg-[#167c70] px-4 py-3 font-bold text-white hover:bg-[#106458]" style="background: rgb(22, 124, 112); color: rgb(255, 255, 255); font-weight: 700;"> <span class="lang-es">Buscar disponibilidad</span><span class="lang-en">Search availability</span> </button>
+      <p id="searchMessage" class="md:col-span-4 hidden rounded-lg px-3 py-2 text-sm font-semibold" aria-live="polite"></p>
+     </form>
+    </div>
+   </section>
+   <section id="tours" class="max-w-7xl mx-auto px-4 py-20">
+    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+     <div>
+      <p class="text-sm font-bold tracking-[.18em] text-[#c65f3b]">DESCUBRE CUSCO</p>
+      <h2 data-template-id="catalog-title" class="canva-text display mt-2 text-4xl" style="color: rgb(8, 51, 77); font-weight: 700; font-style: normal; font-size: 24px;">Experiencias que dejan huella</h2>
+      <p class="mt-3 text-[#52717d]"><span class="lang-es">Elige tu ritmo. Nosotros cuidamos cada detalle.</span><span class="lang-en">Choose your pace. We take care of every detail.</span></p>
+     </div>
+     <div data-template-id="rating-banner" class="canva-banner rounded-xl bg-[#08334d] px-5 py-3 text-white" style="background: rgb(8, 51, 77); color: rgb(255, 255, 255); font-weight: 600;">
+      <strong>4.9/5</strong> <span class="lang-es">valoración promedio · Demo</span><span class="lang-en">average rating · Demo</span>
+     </div>
+    </div>
+    <div class="mt-8 flex flex-wrap gap-3 rounded-2xl border border-[#d8e4e1] bg-white p-4">
+     <div>
+      <label for="difficultyFilter" class="sr-only">Dificultad</label><select id="difficultyFilter" class="focus-ring rounded-lg border border-[#d8e4e1] px-3 py-2 text-sm"><option value="all">Dificultad</option><option>Fácil</option><option>Moderada</option><option>Desafiante</option></select>
+     </div>
+     <div>
+      <label for="durationFilter" class="sr-only">Duración</label><select id="durationFilter" class="focus-ring rounded-lg border border-[#d8e4e1] px-3 py-2 text-sm"><option value="all">Duración</option><option value="1 día">1 día</option><option value="2 días">2 días</option></select>
+     </div>
+     <div>
+      <label for="walkFilter" class="sr-only">Caminata</label><select id="walkFilter" class="focus-ring rounded-lg border border-[#d8e4e1] px-3 py-2 text-sm"><option value="all">Tipo de caminata</option><option value="Cultural">Cultural</option><option value="Alta montaña">Alta montaña</option><option value="Panorámica">Panorámica</option></select>
+     </div>
+     <div>
+      <label for="tagFilter" class="sr-only">Etiqueta</label><select id="tagFilter" class="focus-ring rounded-lg border border-[#d8e4e1] px-3 py-2 text-sm"><option value="all">Todas las etiquetas</option><option value="Más vendido">Más vendido</option><option value="Incluye tren">Incluye tren</option></select>
+     </div>
+     <div class="ml-auto">
+      <label for="sortFilter" class="sr-only">Ordenar</label><select id="sortFilter" class="focus-ring rounded-lg border border-[#d8e4e1] px-3 py-2 text-sm"><option value="popular">Popularidad</option><option value="low">Precio: menor</option><option value="high">Precio: mayor</option></select>
+     </div>
+    </div>
+    <p id="emptyTours" class="hidden my-10 text-center text-[#52717d]" aria-live="polite">No encontramos experiencias con esos filtros. Prueba otra combinación.</p>
+    <div id="tourGrid" class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+     <article class="tour-card rounded-2xl overflow-hidden bg-white border border-[#d8e4e1]" data-tour="Machu Picchu" data-price="289" data-difficulty="Moderada" data-duration="2 días" data-walk="Cultural" data-tag="Incluye tren" data-popularity="99"><img data-template-id="tour-machu-image" loading="lazy" class="canva-image h-52 w-full object-cover" src="https://images.pexels.com/photos/37885473/pexels-photo-37885473.jpeg" alt="Stunning aerial view of the historic Machu Picchu in the Andes mountains, showcasing its ancient architecture and lush surroundings.">
+      <div class="p-5">
+       <div class="flex justify-between gap-2">
+        <span data-template-id="machu-tag" class="canva-tag rounded-full bg-[#d99b2b] px-2 py-1 text-xs font-bold" style="background: rgb(217, 155, 43); color: rgb(8, 51, 77); font-weight: 700; font-style: normal; font-size: 16px;">Incluye tren</span><span class="text-[#d99b2b]">★★★★★</span>
+       </div>
+       <h3 data-template-id="machu-title" class="canva-text mt-4 text-xl font-bold" style="color: rgb(8, 51, 77); font-weight: 700; font-style: normal; font-size: 20px;">Machu Picchu: Circuitos y Tren</h3>
+       <p class="mt-1 text-sm text-[#52717d]">Machu Picchu · 2 días · Cultural</p>
+       <div class="mt-4 flex justify-between items-end">
+        <div>
+         <p class="text-xs text-[#52717d]">Desde</p><strong class="price text-2xl" data-usd="289"></strong>
+        </div><button type="button" class="book-tour focus-ring rounded-lg bg-[#08334d] px-4 py-2 font-bold text-white" data-tour-id="Machu Picchu">Ver detalles</button>
+       </div>
+      </div>
+     </article>
+     <article class="tour-card rounded-2xl overflow-hidden bg-white border border-[#d8e4e1]" data-tour="Montaña de Colores" data-price="54" data-difficulty="Desafiante" data-duration="1 día" data-walk="Alta montaña" data-tag="Más vendido" data-popularity="94"><img data-template-id="tour-rainbow-image" loading="lazy" class="canva-image h-52 w-full object-cover" src="https://images.pexels.com/photos/16844681/pexels-photo-16844681.jpeg" alt="A mesmerizing aerial view of Cusco's iconic Rainbow Mountain with its vibrant natural stripes.">
+      <div class="p-5">
+       <div class="flex justify-between">
+        <span data-template-id="rainbow-tag" class="canva-tag rounded-full bg-[#c65f3b] px-2 py-1 text-xs font-bold text-white" style="background: rgb(198, 95, 59); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Más vendido</span><span class="text-[#d99b2b]">★★★★★</span>
+       </div>
+       <h3 data-template-id="rainbow-title" class="canva-text mt-4 text-xl font-bold" style="color: rgb(8, 51, 77); font-weight: 700; font-style: normal; font-size: 20px;">Montaña de Colores</h3>
+       <p class="mt-1 text-sm text-[#52717d]">Vinicunca · 1 día · Alta montaña</p>
+       <div class="mt-4 flex justify-between items-end">
+        <div>
+         <p class="text-xs text-[#52717d]">Desde</p><strong class="price text-2xl" data-usd="54"></strong>
+        </div><button type="button" class="book-tour focus-ring rounded-lg bg-[#08334d] px-4 py-2 font-bold text-white" data-tour-id="Montaña de Colores">Ver detalles</button>
+       </div>
+      </div>
+     </article>
+     <article class="tour-card rounded-2xl overflow-hidden bg-white border border-[#d8e4e1]" data-tour="Laguna Humantay" data-price="49" data-difficulty="Moderada" data-duration="1 día" data-walk="Alta montaña" data-tag="" data-popularity="89"><img data-template-id="tour-humantay-image" loading="lazy" class="canva-image h-52 w-full object-cover" src="https://images.pexels.com/photos/39242472/pexels-photo-39242472.jpeg" alt="Stunning view of the turquoise Humantay Lake nestled in the Andes, Peru.">
+      <div class="p-5">
+       <div class="flex justify-end text-[#d99b2b]">
+        ★★★★★
+       </div>
+       <h3 data-template-id="humantay-title" class="canva-text mt-4 text-xl font-bold" style="color: rgb(8, 51, 77); font-weight: 700; font-style: normal; font-size: 20px;">Laguna Humantay</h3>
+       <p class="mt-1 text-sm text-[#52717d]">Soraypampa · 1 día · Moderada</p>
+       <div class="mt-4 flex justify-between items-end">
+        <div>
+         <p class="text-xs text-[#52717d]">Desde</p><strong class="price text-2xl" data-usd="49"></strong>
+        </div><button type="button" class="book-tour focus-ring rounded-lg bg-[#08334d] px-4 py-2 font-bold text-white" data-tour-id="Laguna Humantay">Ver detalles</button>
+       </div>
+      </div>
+     </article>
+     <article class="tour-card rounded-2xl overflow-hidden bg-white border border-[#d8e4e1]" data-tour="Valle Sagrado" data-price="62" data-difficulty="Fácil" data-duration="1 día" data-walk="Cultural" data-tag="Más vendido" data-popularity="92"><img data-template-id="tour-valley-image" loading="lazy" class="canva-image h-52 w-full object-cover" src="https://images.pexels.com/photos/5082930/pexels-photo-5082930.jpeg" alt="Explore the ancient Incan terraces of Ollantaytambo in Peru, captured in a stunning aerial view.">
+      <div class="p-5">
+       <div class="flex justify-between">
+        <span class="rounded-full bg-[#c65f3b] px-2 py-1 text-xs font-bold text-white">Más vendido</span><span class="text-[#d99b2b]">★★★★★</span>
+       </div>
+       <h3 data-template-id="valley-title" class="canva-text mt-4 text-xl font-bold" style="color: rgb(8, 51, 77); font-weight: 700; font-style: normal; font-size: 20px;">Valle Sagrado</h3>
+       <p class="mt-1 text-sm text-[#52717d]">Pisac · Ollantaytambo · 1 día</p>
+       <div class="mt-4 flex justify-between items-end">
+        <div>
+         <p class="text-xs text-[#52717d]">Desde</p><strong class="price text-2xl" data-usd="62"></strong>
+        </div><button type="button" class="book-tour focus-ring rounded-lg bg-[#08334d] px-4 py-2 font-bold text-white" data-tour-id="Valle Sagrado">Ver detalles</button>
+       </div>
+      </div>
+     </article>
+     <article class="tour-card rounded-2xl overflow-hidden bg-white border border-[#d8e4e1]" data-tour="Maras-Moray" data-price="46" data-difficulty="Fácil" data-duration="1 día" data-walk="Panorámica" data-tag="" data-popularity="81"><img data-template-id="tour-maras-image" loading="lazy" class="canva-image h-52 w-full object-cover" src="https://images.pexels.com/photos/17449746/pexels-photo-17449746.jpeg" alt="Discover the ancient Inca terraces of Moray, a fascinating archaeological site in Maras, Peru.">
+      <div class="p-5">
+       <div class="flex justify-end text-[#d99b2b]">
+        ★★★★★
+       </div>
+       <h3 data-template-id="maras-title" class="canva-text mt-4 text-xl font-bold" style="color: rgb(8, 51, 77); font-weight: 700; font-style: normal; font-size: 20px;">Maras-Moray</h3>
+       <p class="mt-1 text-sm text-[#52717d]">Maras · Moray · 1 día</p>
+       <div class="mt-4 flex justify-between items-end">
+        <div>
+         <p class="text-xs text-[#52717d]">Desde</p><strong class="price text-2xl" data-usd="46"></strong>
+        </div><button type="button" class="book-tour focus-ring rounded-lg bg-[#08334d] px-4 py-2 font-bold text-white" data-tour-id="Maras-Moray">Ver detalles</button>
+       </div>
+      </div>
+     </article>
+     <article class="tour-card rounded-2xl overflow-hidden bg-white border border-[#d8e4e1]" data-tour="City Tour Cusco" data-price="35" data-difficulty="Fácil" data-duration="1 día" data-walk="Cultural" data-tag="" data-popularity="85"><img data-template-id="tour-city-image" loading="lazy" class="canva-image h-52 w-full object-cover" src="https://images.pexels.com/photos/36676150/pexels-photo-36676150.jpeg" alt="Fountain statue and colonial architecture against a dramatic sky in Cusco, Peru.">
+      <div class="p-5">
+       <div class="flex justify-end text-[#d99b2b]">
+        ★★★★★
+       </div>
+       <h3 data-template-id="city-title" class="canva-text mt-4 text-xl font-bold" style="color: rgb(8, 51, 77); font-weight: 700; font-style: normal; font-size: 20px;">City Tour Cusco</h3>
+       <p class="mt-1 text-sm text-[#52717d]">Centro histórico · 1 día · Fácil</p>
+       <div class="mt-4 flex justify-between items-end">
+        <div>
+         <p class="text-xs text-[#52717d]">Desde</p><strong class="price text-2xl" data-usd="35"></strong>
+        </div><button type="button" class="book-tour focus-ring rounded-lg bg-[#08334d] px-4 py-2 font-bold text-white" data-tour-id="City Tour Cusco">Ver detalles</button>
+       </div>
+      </div>
+     </article>
+    </div>
+   </section>
+   <section id="booking" class="bg-[#08334d] py-20">
+    <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-[1.4fr_.8fr] gap-8">
+     <div class="rounded-2xl bg-white p-6 md:p-8">
+      <p class="text-sm font-bold tracking-[.16em] text-[#c65f3b]">MOTOR DE RESERVA</p>
+      <h2 data-template-id="booking-title" class="canva-text display mt-2 text-3xl" style="color: rgb(8, 51, 77); font-weight: 700; font-style: normal; font-size: 24px;">Asegura tu lugar en los Andes</h2>
+      <p class="mt-2 text-[#52717d]">Los ingresos y circuitos tienen control estricto de cupos.</p>
+      <div class="mt-6">
+       <h3 class="font-bold">Octubre 2026 · disponibilidad demostrativa</h3>
+       <div id="calendar" class="mt-3 grid grid-cols-7 gap-2"></div>
+       <p class="mt-3 text-xs text-[#52717d]">Verde: disponible · Oro: cupos limitados · Gris: agotado</p>
+      </div>
+      <div class="mt-7 grid md:grid-cols-3 gap-4">
+       <div>
+        <label for="adults" class="font-bold text-sm">Adultos</label><input id="adults" type="number" min="0" value="2" class="focus-ring mt-1 w-full rounded-lg border border-[#d8e4e1] p-3">
+       </div>
+       <div>
+        <label for="children" class="font-bold text-sm">Niños</label><input id="children" type="number" min="0" value="0" class="focus-ring mt-1 w-full rounded-lg border border-[#d8e4e1] p-3">
+       </div>
+       <div>
+        <label for="students" class="font-bold text-sm">Estudiantes ISIC</label><input id="students" type="number" min="0" value="0" class="focus-ring mt-1 w-full rounded-lg border border-[#d8e4e1] p-3">
+       </div>
+      </div>
+      <div class="mt-5 grid md:grid-cols-2 gap-4">
+       <div>
+        <label for="train" class="font-bold text-sm">Tren / traslado</label><select id="train" class="focus-ring mt-1 w-full rounded-lg border border-[#d8e4e1] p-3"><option value="Estándar">Servicio estándar</option><option value="Expedition">Tren Expedition (+ US$35)</option><option value="Vistadome">Tren Vistadome (+ US$75)</option><option value="Privado">Traslado privado (+ US$55)</option></select>
+       </div>
+       <fieldset>
+        <legend class="font-bold text-sm">Servicios adicionales</legend>
+        <div class="mt-2 flex flex-wrap gap-3 text-sm">
+         <label><input class="extra" type="checkbox" value="Guía bilingüe" data-price="20"> Guía bilingüe</label><label><input class="extra" type="checkbox" value="Alimentación" data-price="15"> Alimentación</label><label><input class="extra" type="checkbox" value="Traslado hotel" data-price="18"> Traslado hotel</label>
+        </div>
+       </fieldset>
+      </div>
+     </div>
+     <aside data-template-id="booking-summary-panel" class="canva-panel rounded-2xl bg-[#e8f4f1] p-6 md:p-8 h-fit lg:sticky lg:top-24" style="background: rgb(232, 244, 241);">
+      <p class="text-sm font-bold tracking-[.16em] text-[#167c70]">TU RESERVA</p>
+      <h3 id="summaryTour" class="display mt-2 text-2xl">Machu Picchu: Circuitos y Tren</h3>
+      <dl class="mt-6 space-y-3 text-sm">
+       <div class="flex justify-between">
+        <dt>
+         Fecha
+        </dt>
+        <dd id="summaryDate" class="font-bold">
+         Selecciona una fecha
+        </dd>
+       </div>
+       <div class="flex justify-between">
+        <dt>
+         Pasajeros
+        </dt>
+        <dd id="summaryGuests" class="font-bold">
+         2
+        </dd>
+       </div>
+       <div class="flex justify-between">
+        <dt>
+         Cupos restantes
+        </dt>
+        <dd id="summarySeats" class="font-bold text-[#167c70]">
+         12 disponibles
+        </dd>
+       </div>
+       <div class="border-t border-[#bfd8d2] pt-3 flex justify-between text-lg">
+        <dt class="font-bold">
+         Total estimado
+        </dt>
+        <dd id="summaryTotal" class="font-bold"></dd>
+       </div>
+      </dl>
+      <p class="mt-5 rounded-lg bg-white p-3 text-xs text-[#52717d]">Cancelación sin coste hasta 72 h antes para servicios elegibles. Los boletos oficiales están sujetos a validación del operador.</p>
+      <p id="bookingError" class="hidden mt-4 rounded-lg bg-red-50 p-3 text-sm font-semibold text-red-700" aria-live="polite"></p><button id="continuePayment" data-template-id="continue-payment-button" type="button" class="canva-button focus-ring mt-5 w-full rounded-lg bg-[#c65f3b] px-5 py-3 font-bold text-white hover:bg-[#a94b2e]" style="background: rgb(198, 95, 59); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">Continuar al pago</button>
+     </aside>
+    </div>
+   </section>
+   <section id="tips" class="max-w-7xl mx-auto px-4 py-20">
+    <div class="max-w-2xl">
+     <p class="text-sm font-bold tracking-[.16em] text-[#c65f3b]">CUSCO TIPS</p>
+     <h2 data-template-id="tips-title" class="canva-text display mt-2 text-4xl" style="color: rgb(8, 51, 77); font-weight: 700; font-style: normal; font-size: 24px;">Viaja informado, disfruta más</h2>
+    </div>
+    <div class="mt-8 grid md:grid-cols-2 gap-4">
+     <details class="rounded-xl border border-[#d8e4e1] bg-white p-5">
+      <summary class="cursor-pointer font-bold">Aclimatación a la altura</summary>
+      <p class="mt-3 text-sm text-[#52717d]">Reserva uno o dos días tranquilos en Cusco antes de excursiones de gran altitud. Hidrátate y consulta a un profesional si tienes dudas médicas.</p>
+     </details>
+     <details class="rounded-xl border border-[#d8e4e1] bg-white p-5">
+      <summary class="cursor-pointer font-bold">Qué llevar a Machu Picchu</summary>
+      <p class="mt-3 text-sm text-[#52717d]">Lleva documento vigente, protección solar, agua, impermeable ligero y calzado cómodo. Confirma las reglas aplicables antes de partir.</p>
+     </details>
+     <details class="rounded-xl border border-[#d8e4e1] bg-white p-5">
+      <summary class="cursor-pointer font-bold">Cambios y cancelaciones</summary>
+      <p class="mt-3 text-sm text-[#52717d]">Las condiciones dependen del servicio contratado. Revisa el resumen final antes de confirmar tu reserva demostrativa.</p>
+     </details>
+     <details class="rounded-xl border border-[#d8e4e1] bg-white p-5">
+      <summary class="cursor-pointer font-bold">Revalidación de boletos</summary>
+      <p class="mt-3 text-sm text-[#52717d]">Horarios y boletos oficiales están sujetos a disponibilidad y validación del operador local.</p>
+     </details>
+    </div>
+   </section>
+   <section class="bg-[#e8f4f1] py-16">
+    <div class="max-w-7xl mx-auto px-4">
+     <div class="flex justify-between items-end">
+      <div>
+       <p class="text-sm font-bold tracking-[.16em] text-[#167c70]">COMUNIDAD VIAJERA</p>
+       <h2 data-template-id="testimonials-title" class="canva-text display mt-2 text-3xl" style="color: rgb(8, 51, 77); font-weight: 700; font-style: normal; font-size: 24px;">Pequeñas historias, grandes paisajes</h2>
+      </div>
+      <p class="text-sm text-[#52717d]">Contenido demostrativo · Atención local en Cusco</p>
+     </div>
+     <div class="mt-8 grid md:grid-cols-3 gap-5">
+      <blockquote class="rounded-xl bg-white p-6 shadow-sm">
+       <div class="text-[#d99b2b]">
+        ★★★★★
+       </div>
+       <p class="mt-3">“Todo fue claro desde la elección del circuito hasta el tren. Un día inolvidable.”</p>
+       <footer class="mt-4 text-sm font-bold">
+        Amelia · Canadá · Machu Picchu
+       </footer>
+      </blockquote>
+      <blockquote class="rounded-xl bg-white p-6 shadow-sm">
+       <div class="text-[#d99b2b]">
+        ★★★★★
+       </div>
+       <p class="mt-3">“El equipo local nos ayudó a elegir una ruta que se ajustaba a nuestra aclimatación.”</p>
+       <footer class="mt-4 text-sm font-bold">
+        Jonas · Alemania · Valle Sagrado
+       </footer>
+      </blockquote>
+      <blockquote class="rounded-xl bg-white p-6 shadow-sm">
+       <div class="text-[#d99b2b]">
+        ★★★★★
+       </div>
+       <p class="mt-3">“Un flujo simple y muchos detalles útiles antes de caminar a Humantay.”</p>
+       <footer class="mt-4 text-sm font-bold">
+        Sofia · Chile · Laguna Humantay
+       </footer>
+      </blockquote>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer data-template-id="footer-section" class="canva-footer bg-[#08334d] text-white" style="background: rgb(8, 51, 77); color: rgb(255, 255, 255);">
+   <div class="max-w-7xl mx-auto px-4 py-14 grid md:grid-cols-4 gap-8">
+    <div>
+     <h2 data-template-id="footer-brand" class="canva-text display text-2xl" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 25px;">Cusco Expedition</h2>
+     <p class="mt-3 text-sm text-[#d4e4e6]">Una propuesta demostrativa para explorar Cusco con calma, claridad y asombro.</p>
+    </div>
+    <div>
+     <h3 class="font-bold">Explora</h3>
+     <ul class="mt-3 space-y-2 text-sm text-[#d4e4e6]">
+      <li>Destinos</li>
+      <li>Ayuda</li>
+      <li>Políticas</li>
+      <li>Términos</li>
+     </ul>
+    </div>
+    <div>
+     <h3 class="font-bold">Contacto demo</h3>
+     <p class="mt-3 text-sm text-[#d4e4e6]">hola@cuscoexpedition.demo<br>
+      +51 84 000 000</p>
+     <div class="mt-4 flex gap-3">
+      <i data-lucide="instagram"></i><i data-lucide="facebook"></i><i data-lucide="mail"></i>
+     </div>
+    </div>
+    <div class="rounded-xl bg-[#124661] p-5">
+     <h3 class="font-bold">Cusco, Perú</h3>
+     <div class="mt-3 h-24 rounded-lg weave flex items-center justify-center border border-[#538095]">
+      <i data-lucide="map-pin"></i><span class="ml-2 font-bold">Mapa demostrativo</span>
+     </div>
+    </div>
+   </div>
+   <div class="border-t border-[#356177] px-4 py-4 text-center text-xs text-[#b7d0d5]">
+    Elementos visuales demostrativos: Operador autorizado · Pago seguro · Soporte local
+   </div>
+  </footer><button id="whatsappButton" type="button" class="focus-ring fixed bottom-5 right-5 z-40 rounded-full bg-[#167c70] p-4 text-white shadow-xl" aria-label="Contactar por WhatsApp"><i data-lucide="message-circle"></i><span class="sr-only">Mensaje demostrativo de WhatsApp</span></button>
+  <div id="whatsappTip" class="hidden fixed bottom-20 right-5 z-40 rounded-lg bg-[#08334d] px-3 py-2 text-sm text-white">
+   Hola, quiero ayuda con mi aventura en Cusco.
+  </div>
+  <div id="tourModal" class="hidden fixed inset-0 z-50 items-center justify-center bg-[#031f31]/70 p-4" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+   <div class="max-h-[90%] w-full max-w-2xl overflow-y-auto rounded-2xl bg-white p-6 md:p-8 shadow-2xl">
+    <div class="flex justify-between gap-4">
+     <div>
+      <p class="text-sm font-bold text-[#c65f3b]">EXPERIENCIA DESTACADA</p>
+      <h2 id="modalTitle" class="display mt-1 text-3xl"></h2>
+     </div><button id="closeModal" type="button" class="focus-ring rounded-lg p-2" aria-label="Cerrar detalles"><i data-lucide="x"></i></button>
+    </div>
+    <p id="modalDescription" class="mt-4 text-[#52717d]"></p>
+    <div class="mt-6 grid md:grid-cols-2 gap-5 text-sm">
+     <div>
+      <h3 class="font-bold">Itinerario breve</h3>
+      <p class="mt-2 text-[#52717d]">Recogida coordinada, recorrido guiado y momentos para disfrutar del paisaje.</p>
+     </div>
+     <div>
+      <h3 class="font-bold">Incluye</h3>
+      <p class="mt-2 text-[#52717d]">Coordinación local, guía según servicio y asistencia durante la experiencia.</p>
+     </div>
+    </div>
+    <div class="mt-5 rounded-lg bg-[#fff8e9] p-4 text-sm">
+     Recomendación: considera la aclimatación antes de tours de alta montaña.
+    </div><button id="modalReserve" type="button" class="focus-ring mt-6 w-full rounded-lg bg-[#c65f3b] px-5 py-3 font-bold text-white">Iniciar reserva</button>
+   </div>
+  </div>
+  <div id="checkoutModal" class="hidden fixed inset-0 z-50 overflow-y-auto bg-[#f4f8f7] p-4 md:p-10" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+   <div class="max-w-5xl mx-auto">
+    <div class="flex justify-between items-center">
+     <h2 id="checkoutTitle" class="display text-3xl">Completa tu reserva</h2><button id="closeCheckout" class="focus-ring rounded-lg p-2" aria-label="Cerrar checkout"><i data-lucide="x"></i></button>
+    </div>
+    <div class="mt-5 grid grid-cols-4 gap-2 text-xs md:text-sm font-bold">
+     <div class="step rounded-lg bg-[#08334d] p-3 text-center text-white">
+      1. Datos
+     </div>
+     <div class="step rounded-lg bg-white p-3 text-center">
+      2. Extras
+     </div>
+     <div class="step rounded-lg bg-white p-3 text-center">
+      3. Pago
+     </div>
+     <div class="step rounded-lg bg-white p-3 text-center">
+      4. Confirmación
+     </div>
+    </div>
+    <div class="mt-6 grid lg:grid-cols-[1.25fr_.75fr] gap-6">
+     <section class="rounded-2xl bg-white p-6">
+      <div id="checkoutForm">
+       <h3 class="text-xl font-bold">Datos del viajero</h3>
+       <p class="mt-1 text-sm text-[#52717d]">Modo demostración: no introduzcas datos sensibles ni información de tarjetas.</p>
+       <div class="mt-5 grid md:grid-cols-2 gap-4">
+        <div>
+         <label for="travelerName" class="font-bold text-sm">Nombre completo</label><input id="travelerName" class="focus-ring mt-1 w-full rounded-lg border border-[#d8e4e1] p-3" placeholder="Ej. Ana Quispe">
+        </div>
+        <div>
+         <label for="travelerEmail" class="font-bold text-sm">Correo electrónico</label><input id="travelerEmail" type="email" class="focus-ring mt-1 w-full rounded-lg border border-[#d8e4e1] p-3" placeholder="ana@ejemplo.com">
+        </div>
+       </div>
+       <div class="mt-7">
+        <h3 class="text-xl font-bold">Método de pago</h3>
+        <p class="mt-1 text-sm text-[#52717d]">Opciones visuales demostrativas. No se procesan pagos reales.</p>
+        <div class="mt-4 grid grid-cols-2 md:grid-cols-3 gap-3">
+         <div class="payment-choice">
+          <input class="sr-only" type="radio" id="visa" name="payment" value="Visa" checked=""><label for="visa" class="focus-ring block cursor-pointer rounded-lg border-2 border-[#d8e4e1] p-3 text-center font-bold">Visa</label>
+         </div>
+         <div class="payment-choice">
+          <input class="sr-only" type="radio" id="mastercard" name="payment" value="Mastercard"><label for="mastercard" class="focus-ring block cursor-pointer rounded-lg border-2 border-[#d8e4e1] p-3 text-center font-bold">Mastercard</label>
+         </div>
+         <div class="payment-choice">
+          <input class="sr-only" type="radio" id="yape" name="payment" value="Yape"><label for="yape" class="focus-ring block cursor-pointer rounded-lg border-2 border-[#d8e4e1] p-3 text-center font-bold">Yape</label>
+         </div>
+         <div class="payment-choice">
+          <input class="sr-only" type="radio" id="plin" name="payment" value="Plin"><label for="plin" class="focus-ring block cursor-pointer rounded-lg border-2 border-[#d8e4e1] p-3 text-center font-bold">Plin</label>
+         </div>
+         <div class="payment-choice">
+          <input class="sr-only" type="radio" id="pagoefectivo" name="payment" value="PagoEfectivo"><label for="pagoefectivo" class="focus-ring block cursor-pointer rounded-lg border-2 border-[#d8e4e1] p-3 text-center font-bold">PagoEfectivo</label>
+         </div>
+         <div class="payment-choice">
+          <input class="sr-only" type="radio" id="paypal" name="payment" value="PayPal"><label for="paypal" class="focus-ring block cursor-pointer rounded-lg border-2 border-[#d8e4e1] p-3 text-center font-bold">PayPal</label>
+         </div>
+        </div>
+       </div>
+       <p id="checkoutError" class="hidden mt-5 rounded-lg bg-red-50 p-3 text-sm font-semibold text-red-700" aria-live="polite"></p><button id="confirmBooking" type="button" class="focus-ring mt-7 w-full rounded-lg bg-[#167c70] p-3 font-bold text-white">Confirmar reserva demostrativa</button>
+      </div>
+      <div id="successView" class="hidden text-center py-8">
+       <div class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-[#e8f4f1] text-[#167c70]">
+        <i data-lucide="check"></i>
+       </div>
+       <h3 class="display mt-5 text-3xl">¡Tu aventura está en camino!</h3>
+       <p class="mt-3 text-[#52717d]">Reserva demostrativa confirmada. Código: <strong id="bookingCode"></strong></p>
+       <p class="mt-4 text-sm text-[#52717d]">Un operador local validaría disponibilidad final y próximos pasos por correo.</p><button id="exploreAgain" type="button" class="focus-ring mt-7 rounded-lg bg-[#c65f3b] px-5 py-3 font-bold text-white">Volver a explorar tours</button>
+      </div>
+     </section>
+     <aside class="rounded-2xl bg-[#08334d] p-6 text-white h-fit">
+      <p class="text-sm font-bold tracking-[.15em] text-[#d99b2b]">RESUMEN</p>
+      <h3 id="checkoutTour" class="display mt-2 text-2xl"></h3>
+      <div class="mt-6 space-y-3 text-sm text-[#d4e4e6]">
+       <div class="flex justify-between">
+        <span>Fecha</span><strong id="checkoutDate" class="text-white"></strong>
+       </div>
+       <div class="flex justify-between">
+        <span>Pasajeros</span><strong id="checkoutGuests" class="text-white"></strong>
+       </div>
+       <div class="flex justify-between">
+        <span>Extras</span><strong id="checkoutExtras" class="text-white text-right max-w-[55%]"></strong>
+       </div>
+       <div class="border-t border-[#356177] pt-4 flex justify-between text-lg">
+        <span>Total</span><strong id="checkoutTotal"></strong>
+       </div>
+      </div>
+      <div class="mt-6 rounded-lg bg-[#124661] p-3 text-xs">
+       🔒 Entorno demostrativo con métodos de pago visuales. Nunca se solicitan números de tarjeta.
+      </div>
+     </aside>
+    </div>
+   </div>
+  </div>
+  <script src="/_sdk/a2d80034c9a70a18.editing_sdk.js" integrity="sha512-gj+CjW8sJ2O41CTbmTWGW+KC4E59rCq//n91BemDfzGrUB9REGAumT0UKy90X5r4wGZZy1G5qVtclSpgi4i1zA=="></script>
+  <script>
+    const state = { language:'es', currency:'USD', tour:'Machu Picchu', date:'', adults:2, children:0, students:0, train:'Estándar', extras:[], base:289, seats:12, selectedDay:null, records:[] };
+    const rates = { USD:1, PEN:3.75 };
+    const tours = {
+      'Machu Picchu': {price:289, description:'Una experiencia de dos días con circuitos coordinados y tren para descubrir la ciudadela inca.'},
+      'Montaña de Colores': {price:54, description:'Un desafío de alta montaña hacia los paisajes coloridos de Vinicunca.'},
+      'Laguna Humantay': {price:49, description:'Caminata escénica hasta una laguna turquesa abrazada por los Andes.'},
+      'Valle Sagrado': {price:62, description:'Un recorrido cultural por terrazas, pueblos y paisajes del Valle Sagrado.'},
+      'Maras-Moray': {price:46, description:'Salineras y terrazas circulares en una ruta panorámica de gran historia.'},
+      'City Tour Cusco': {price:35, description:'Una introducción amable a la arquitectura, plazas y memoria viva de Cusco.'}
+    };
+    const $ = id => document.getElementById(id);
+    function money(usd){ const n=usd*rates[state.currency]; return new Intl.NumberFormat(state.language==='es'?'es-PE':'en-US',{style:'currency',currency:state.currency,maximumFractionDigits:0}).format(n); }
+    function totalGuests(){ return state.adults+state.children+state.students; }
+    function trainCost(){ return {Estándar:0,Expedition:35,Vistadome:75,Privado:55}[state.train]||0; }
+    function total(){ return (state.base*totalGuests())+trainCost()+state.extras.reduce((sum,e)=>sum+Number(e.price),0); }
+    function updatePrices(){ document.querySelectorAll('.price').forEach(el=>el.textContent=money(Number(el.dataset.usd))); $('summaryTotal').textContent=money(total()); $('checkoutTotal').textContent=money(total()); }
+    function updateSummary(){
+      $('summaryTour').textContent=state.tour; $('summaryDate').textContent=state.date||'Selecciona una fecha'; $('summaryGuests').textContent=totalGuests();
+      $('summarySeats').textContent=state.seats>0 ? state.seats+' disponibles' : 'Agotado';
+      $('checkoutTour').textContent=state.tour; $('checkoutDate').textContent=state.date||'—'; $('checkoutGuests').textContent=totalGuests();
+      $('checkoutExtras').textContent=state.extras.length ? state.extras.map(x=>x.name).join(', ') : 'Sin extras';
+      updatePrices();
+    }
+    function chooseTour(name){ state.tour=name; state.base=tours[name].price; updateSummary(); document.querySelector('#booking').scrollIntoView({behavior:'smooth'}); }
+    function buildCalendar(){
+      const cal=$('calendar'); for(let day=1;day<=21;day++){ const b=document.createElement('button'); b.type='button'; b.textContent=day; b.className='cal-day focus-ring'; const sold=[6,13,20].includes(day), limited=[4,9,16,19].includes(day); if(sold){b.classList.add('sold');b.disabled=true;}else if(limited)b.classList.add('limited');else b.classList.add('available');
+        b.addEventListener('click',()=>{document.querySelectorAll('.cal-day').forEach(x=>x.classList.remove('selected'));b.classList.add('selected');state.date=`${String(day).padStart(2,'0')}/10/2026`;state.seats=limited?3:12;state.selectedDay=day;updateSummary();}); cal.appendChild(b); }
+    }
+    function applyFilters(){
+      const d=$('difficultyFilter').value, du=$('durationFilter').value,w=$('walkFilter').value,t=$('tagFilter').value;
+      let visible=0; document.querySelectorAll('.tour-card').forEach(card=>{const show=(d==='all'||card.dataset.difficulty===d)&&(du==='all'||card.dataset.duration===du)&&(w==='all'||card.dataset.walk===w)&&(t==='all'||card.dataset.tag===t);card.classList.toggle('hidden-filter',!show);if(show)visible++;});
+      $('emptyTours').classList.toggle('hidden',visible!==0);
+      const grid=$('tourGrid'), cards=[...grid.children], mode=$('sortFilter').value; cards.sort((a,b)=>mode==='popular'?b.dataset.popularity-a.dataset.popularity:mode==='low'?a.dataset.price-b.dataset.price:b.dataset.price-a.dataset.price).forEach(c=>grid.appendChild(c));
+    }
+    async function initData(){
+      const handler={onDataChanged(data){state.records=data;}};
+      const result=await window.dataSdk.init(handler);
+      if(!result.isOk){ $('checkoutError').textContent='No pudimos preparar el guardado de la reserva demostrativa. Inténtalo de nuevo.'; }
+    }
+    function openCheckout(){ $('checkoutModal').classList.remove('hidden'); $('checkoutModal').classList.add('block'); document.body.classList.add('modal-open'); updateSummary(); }
+    function closeCheckout(){ $('checkoutModal').classList.add('hidden'); $('checkoutModal').classList.remove('block'); document.body.classList.remove('modal-open'); }
+    document.addEventListener('DOMContentLoaded',()=>{
+      lucide.createIcons(); buildCalendar(); updateSummary(); initData();
+      $('languageSelect').addEventListener('change',e=>{state.language=e.target.value;document.body.classList.toggle('english',state.language==='en');updatePrices();});
+      $('currencySelect').addEventListener('change',e=>{state.currency=e.target.value;updatePrices();});
+      $('menuButton').addEventListener('click',()=>{const nav=$('mobileNav');nav.classList.toggle('open');$('menuButton').setAttribute('aria-expanded',nav.classList.contains('open'));});
+      [$('reserveTop'),$('mobileReserve')].forEach(b=>b.addEventListener('click',()=>$('booking').scrollIntoView({behavior:'smooth'})));
+      $('searchForm').addEventListener('submit',e=>{e.preventDefault(); const msg=$('searchMessage'), dest=$('destination').value,date=$('travelDate').value;if(!dest||!date){msg.textContent='Selecciona un destino y una fecha para consultar disponibilidad.';msg.className='md:col-span-4 rounded-lg bg-red-50 px-3 py-2 text-sm font-semibold text-red-700';return;} state.tour=dest; if(tours[dest])state.base=tours[dest].price; state.date=date;state.adults=Number($('quickPassengers').value);$('adults').value=state.adults;updateSummary();msg.textContent='Disponibilidad demostrativa encontrada. Te mostramos experiencias relacionadas.';msg.className='md:col-span-4 rounded-lg bg-[#e8f4f1] px-3 py-2 text-sm font-semibold text-[#167c70]';$('tours').scrollIntoView({behavior:'smooth'});});
+      ['difficultyFilter','durationFilter','walkFilter','tagFilter','sortFilter'].forEach(id=>$(id).addEventListener('change',applyFilters));
+      document.querySelectorAll('.book-tour').forEach(b=>b.addEventListener('click',()=>{const name=b.dataset.tourId;$('modalTitle').textContent=name;$('modalDescription').textContent=tours[name].description;$('modalReserve').dataset.tour=name;$('tourModal').classList.remove('hidden');$('tourModal').classList.add('flex');document.body.classList.add('modal-open');}));
+      $('closeModal').addEventListener('click',()=>{$('tourModal').classList.add('hidden');$('tourModal').classList.remove('flex');document.body.classList.remove('modal-open');});
+      $('modalReserve').addEventListener('click',()=>{const n=$('modalReserve').dataset.tour;$('tourModal').classList.add('hidden');$('tourModal').classList.remove('flex');document.body.classList.remove('modal-open');chooseTour(n);});
+      ['adults','children','students'].forEach(id=>$(id).addEventListener('input',()=>{state[id]=Math.max(0,Number($(id).value)||0);updateSummary();}));
+      $('train').addEventListener('change',()=>{state.train=$('train').value;updateSummary();});
+      document.querySelectorAll('.extra').forEach(c=>c.addEventListener('change',()=>{state.extras=[...document.querySelectorAll('.extra:checked')].map(x=>({name:x.value,price:x.dataset.price}));updateSummary();}));
+      $('continuePayment').addEventListener('click',()=>{const err=$('bookingError');if(!state.date||totalGuests()<1||state.seats===0){err.textContent='Elige una fecha disponible y al menos un pasajero para continuar.';err.classList.remove('hidden');return;}err.classList.add('hidden');openCheckout();});
+      $('closeCheckout').addEventListener('click',closeCheckout);
+      $('confirmBooking').addEventListener('click',async()=>{const err=$('checkoutError'),name=$('travelerName').value.trim(),email=$('travelerEmail').value.trim();if(!name||!email||!email.includes('@')){err.textContent='Introduce un nombre y un correo demostrativos válidos.';err.classList.remove('hidden');return;}if(state.records.length>=999){err.textContent='Se alcanzó el límite de reservas demostrativas. Elimina registros para continuar.';err.classList.remove('hidden');return;}err.classList.add('hidden');const btn=$('confirmBooking');btn.disabled=true;btn.textContent='Guardando reserva…';const code='CE-'+Math.random().toString(36).slice(2,8).toUpperCase();const result=await window.dataSdk.create({language:state.language,currency:state.currency,recent_search:state.tour,selected_tour:state.tour,travel_date:state.date,adults:state.adults,children:state.children,students:state.students,train:state.train,extras:state.extras.map(x=>x.name).join(', '),traveler_name:name,traveler_email:email,payment_method:document.querySelector('input[name="payment"]:checked').value,booking_code:code});btn.disabled=false;btn.textContent='Confirmar reserva demostrativa';if(!result.isOk){err.textContent='No pudimos guardar la reserva demostrativa. Inténtalo nuevamente.';err.classList.remove('hidden');return;}$('bookingCode').textContent=code;$('checkoutForm').classList.add('hidden');$('successView').classList.remove('hidden');lucide.createIcons();});
+      $('exploreAgain').addEventListener('click',()=>{closeCheckout();$('successView').classList.add('hidden');$('checkoutForm').classList.remove('hidden');$('tours').scrollIntoView({behavior:'smooth'});});
+      $('whatsappButton').addEventListener('click',()=>{$('whatsappTip').classList.toggle('hidden');});
+    });
+  </script>
+ 
+</body></html>
